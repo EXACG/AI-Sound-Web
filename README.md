@@ -1,18 +1,33 @@
-# AI-Sound-Web
-~~昨天晚上四点睡的，现在超累。~~
-
-~~啥都不想说，自己研究一下`main.py`吧~~
-
-嗨嗨嗨~我来填坑辣！
+## 配置环境
+本地或服务器部署请配置此环境
+```
+git clone https://github.com/xxtmnrga/AI-Sound-Web.git
+cd /AI-Sound-Web/ && pip install -r requirements.txt
+wget -c "https://github.com/LemonFan-maker/Download-Models/releases/download/ys/ys.pth" -P /work/AI-Sound-Web/ys
+pip install uvicorn
+pip install fastapi
+pip install librosa
+apt-get update
+apt-get -y install libsndfile1
+pip install soundflie
+pip install unidecode
+pip install phonemizer
+pip install pypinyin
+pip install pypinyin_dict
+pip install jieba
+pip install Cython
+cd /AI-Sound-Web/monotonic_align/ && python setup.py build_ext --inplace
+cd /AI-Sound-Web/ && mkdir record
+```
+Python3.8和Python3.9都可运行 
+Python3.10及以上会出现运行库版本不够的情况没法运行
 
 ## 食用方法
 
-1. 打开Action服务，等待出现`bore.pub`。
-
-2. 比方说你的获得网址为bore.pub:12345，那么...
+上面的环境代码配置后,输入```python main.py```
 
 ```
-bore.pub:12345/run?speaker=<说话的人>&text=<想说的话> 
+http://127.0.0.1:8080/run?speaker=<说话的人>&text=<想说的话> 
 ```
 
 到时候将``<说话的人>``直接替换为
@@ -28,9 +43,7 @@ bore.pub:12345/run?speaker=<说话的人>&text=<想说的话>
 
 比方说
 ```
-bore.pub:12345/run?speaker=派蒙&text=我要摆烂。 
+http://127.0.0.1:8080/run?speaker=派蒙&text=我要摆烂。 
 ```
 ## !!注意!!
 文字不要太长，10~20字最好。
-
-那天让派蒙给我读《将进酒》没给我笑死:rofl:
