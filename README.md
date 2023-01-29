@@ -1,7 +1,7 @@
 ## 配置环境
 本地或服务器部署请配置此环境
 ```
-git clone https://github.com/xxtmnrga/AI-Sound-Web.git
+git clone https://github.com/EXACG/AI-Sound-Web.git
 cd /AI-Sound-Web/ && pip install -r requirements.txt
 wget -c "https://github.com/LemonFan-maker/Download-Models/releases/download/ys/ys.pth" -P /work/AI-Sound-Web/ys
 pip install uvicorn
@@ -17,7 +17,6 @@ pip install pypinyin_dict
 pip install jieba
 pip install Cython
 cd /AI-Sound-Web/monotonic_align/ && python setup.py build_ext --inplace
-cd /AI-Sound-Web/ && mkdir record
 ```
 Python3.8和Python3.9都可运行 
 Python3.10及以上会出现运行库版本不够的情况没法运行
